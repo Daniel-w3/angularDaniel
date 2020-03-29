@@ -1,7 +1,7 @@
 <div class="container"> 
     <div class="row" *ngIf="dish"> 
       <div class="col-12 col-sm-6"> 
-        <div class="card" >
+        <div class="card">
             <div class="card-body">
                 <h5 class="card-title">{{dish.name | uppercase}}</h5>
                 <img class="card-img-top" src={{dish.image}} alt={{dish.name}}>
@@ -12,7 +12,25 @@
         </div>
       </div> 
       <div class="col-12 col-sm-6">
-            <p>Display the list of comments here</p> 
+        <div class="card">
+            <div class="card-body">
+                <strong>Comments</strong>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>{{dish.comments[0].comment }}</strong><br>
+                                                {{dish.comments[0].rating}} Stars<br>
+                                                -- {{dish.comments[0].author}}, {{dish.comments[0].date | date: 'MMM. dd, yyyy'}}</li>
+                    <li class="list-group-item"><strong>{{dish.comments[1].comment }}</strong><br>
+                                                {{dish.comments[1].rating}} Stars<br>
+                                                -- {{dish.comments[1].author}}, {{dish.comments[1].date | date: 'MMM. dd, yyyy'}}</li>
+                    <li class="list-group-item"><strong>{{dish.comments[2].comment }}</strong><br>
+                                                {{dish.comments[2].rating}} Stars<br>
+                                                -- {{dish.comments[2].author}}, {{dish.comments[2].date | date: 'MMM. dd, yyyy'}}</li>
+                    <li class="list-group-item"><strong>{{dish.comments[3].comment }}</strong><br>
+                                                {{dish.comments[3].rating}} Stars<br>
+                                                -- {{dish.comments[3].author}}, {{dish.comments[3].date | date: 'MMM. dd, yyyy'}}</li>
+                  </ul>
+            </div>
+        </div>
       </div> 
     </div> 
 </div> 
