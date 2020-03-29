@@ -1,9 +1,18 @@
 <div class="container"> 
-    <div class="row"> 
+    <div class="row" *ngIf="dish"> 
       <div class="col-12 col-sm-6"> 
-        <p>Display the details of the Dish here</p> 
+        <div class="card" >
+            <div class="card-body">
+                <h5 class="card-title">{{dish.name | uppercase}}</h5>
+                <img class="card-img-top" src={{dish.image}} alt={{dish.name}}>
+                <p class="card-text">{{dish.description}}</p>
+                <a href="#" class="card-link btn btn-warning btn-sm">LIKE</a>
+                <a href="#" class="card-link btn btn-warning btn-sm">SHARE</a>
+            </div>
+        </div>
       </div> 
-      <div class="col-12 col-sm-6">       <p>Display the list of comments here</p> 
+      <div class="col-12 col-sm-6">
+            <p>Display the list of comments here</p> 
       </div> 
     </div> 
-  </div> 
+</div> 
