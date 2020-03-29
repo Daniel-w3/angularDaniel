@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row ">
+      <div class="col-12">
+        <h3>Menu</h3>
+        <hr>
+      </div>
+   </div>
+    <div class="row ">
+      <h4 class="col-12">Our famous chocolates</h4>
+      <div class="media" *ngFor="let dish of dishes">
+        <img class=" img-thumbnail align-self-end"
+          src={{dish.image}} alt={{dish.name}}>
+        <div class="media-body">
+          <h5 class="mt-4">{{dish.name | uppercase}}
+            <span class="badge badge-danger">{{dish.label}}</span>
+            <span class="badge badge-pill badge-success">{{dish.price}}</span>
+          </h5>
+          <p class="col d-none d-sm-block">
+            {{dish.description }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
