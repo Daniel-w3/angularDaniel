@@ -1,36 +1,36 @@
 <div class="container"> 
-    <div class="row" *ngIf="dish"> 
-      <div class="col-12 col-sm-6"> 
-        <div class="card">
-            <div class="card-body">
+  <div class="row" *ngIf="dish"> 
+    <div class="col-12 col-sm-6"> 
+      <div class="card">
+        <div class="card-body">
                 <h5 class="card-title">{{dish.name | uppercase}}</h5>
                 <img class="card-img-top" src={{dish.image}} alt={{dish.name}}>
                 <p class="card-text">{{dish.description}}</p>
                 <a href="#" class="card-link btn btn-warning btn-sm">LIKE</a>
                 <a href="#" class="card-link btn btn-warning btn-sm">SHARE</a>
-            </div>
         </div>
-      </div> 
-      <div class="col-12 col-sm-6">
-        <div class="card">
-            <div class="card-body">
-                <strong>Comments</strong>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><strong>{{dish.comments[0].comment }}</strong><br>
+      </div>
+    </div> 
+    <div class="col-12 col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <strong>Comments</strong>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><strong>{{dish.comments[0].comment }}</strong><br>
                                                 {{dish.comments[0].rating}} Stars<br>
                                                 -- {{dish.comments[0].author}}, {{dish.comments[0].date | date: 'MMM. dd, yyyy'}}</li>
-                    <li class="list-group-item"><strong>{{dish.comments[1].comment }}</strong><br>
+            <li class="list-group-item"><strong>{{dish.comments[1].comment }}</strong><br>
                                                 {{dish.comments[1].rating}} Stars<br>
                                                 -- {{dish.comments[1].author}}, {{dish.comments[1].date | date: 'MMM. dd, yyyy'}}</li>
-                    <li class="list-group-item"><strong>{{dish.comments[2].comment }}</strong><br>
+            <li class="list-group-item"><strong>{{dish.comments[2].comment }}</strong><br>
                                                 {{dish.comments[2].rating}} Stars<br>
                                                 -- {{dish.comments[2].author}}, {{dish.comments[2].date | date: 'MMM. dd, yyyy'}}</li>
-                    <li class="list-group-item"><strong>{{dish.comments[3].comment }}</strong><br>
+            <li class="list-group-item"><strong>{{dish.comments[3].comment }}</strong><br>
                                                 {{dish.comments[3].rating}} Stars<br>
                                                 -- {{dish.comments[3].author}}, {{dish.comments[3].date | date: 'MMM. dd, yyyy'}}</li>
-                  </ul>
-            </div>
+          </ul>
         </div>
-      </div> 
+      </div>
     </div> 
+  </div> 
 </div> 
