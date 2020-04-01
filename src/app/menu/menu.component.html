@@ -7,7 +7,8 @@
     </div>
     <div class="row ">
       <h4 class="col-12">Our famous chocolates</h4>
-      <div class="media" *ngFor="let dish of dishes" (click) = "onSelect(dish)">
+      <!-- <div class="media" *ngFor="let dish of dishes" (click) = "onSelect(dish)"> -->
+      <div class="media" *ngFor="let dish of dishes" [routerLink]="['/dishdetail', dish.id]">
         <img class=" img-thumbnail align-self-end"
           src={{dish.image}} alt={{dish.name}}>
         <div class="media-body">
@@ -22,4 +23,4 @@
       </div>
     </div>
 </div>
-<app-dishdetail [dish] = "selectedDish"></app-dishdetail>
+<!-- <app-dishdetail [dish] = "selectedDish"></app-dishdetail> -->

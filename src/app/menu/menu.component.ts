@@ -48,12 +48,12 @@ export class MenuComponent implements OnInit {
 
   // dishes = DISHES;
 
-  dishes:Dish[];
+  dishes: Dish[];
 
-  selectedDish: Dish;
-  onSelect(dish: Dish) {
-    this.selectedDish = dish;
-  }
+  // selectedDish: Dish;
+  // onSelect(dish: Dish) {
+  //   this.selectedDish = dish;
+  // }
 
   constructor(private dishService: DishService) { }
 
