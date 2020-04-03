@@ -9,7 +9,7 @@
     <h4 class="col-12">Our famous chocolates</h4>
     <!-- <div class="media" *ngFor="let dish of dishes" (click) = "onSelect(dish)"> -->
     <div class="media" *ngFor="let dish of dishes" [routerLink]="['/dishdetail', dish.id]">
-      <img class=" img-thumbnail align-self-end" src={{dish.image}} alt={{dish.name}}>
+      <img class=" img-thumbnail align-self-end" src="{{BaseURL + dish.image}}" alt="{{dish.name}}">
       <div class="media-body">
         <h5 class="mt-4">{{dish.name | uppercase}}
           <span class="badge badge-danger">{{dish.label}}</span>
