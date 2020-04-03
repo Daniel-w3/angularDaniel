@@ -8,11 +8,15 @@ import { MenuComponent } from './menu/menu.component';
 import { DishdetailComponent } from './dishdetail/dishdetail.component';
 
 import { DishService } from './services/dish.service';
+import { LeaderService } from './services/leader.service';
+import { FeedbackService } from './services/feedback.service';
+
 import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
-import { LeaderService } from './services/leader.service';
+
 import { baseURL } from './shared/baseurl';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,8 @@ import { baseURL } from './shared/baseurl';
     DishdetailComponent,
     FooterComponent,
     AboutComponent,
-    HomeComponent
+    HomeComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
