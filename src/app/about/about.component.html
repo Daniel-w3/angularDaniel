@@ -8,7 +8,7 @@
     <div class="row">
         <h4 class="col-12">Corporate Leadership</h4>
         <div class="media" *ngFor="let leader of leaders">
-            <img class=" img-thumbnail align-self-end" src={{leader.image}} alt={{leader.name}}>
+            <img class=" img-thumbnail align-self-end" src="{{BaseURL + leader.image}}" alt="{{leader.name}}">
             <div class="media-body">
                 <h5 class="mt-4">{{leader.name | uppercase}}
                     <span class="badge badge-danger">{{leader.designation}}</span>
