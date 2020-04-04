@@ -12,11 +12,13 @@ import { baseURL } from '../shared/baseurl';
   providedIn: 'root'
 })
 export class FeedbackService {
-
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getFeedbacks(): Observable<Feedback[]> {
     return this.http.get<Feedback[]>(baseURL + 'feedback');
   }
 
+  addFeedbacks(fb: Feedback): Observable<Feedback[]> {
+    return this.http.post<Feedback[]>(baseURL + 'feedback', fb);
+  }
 }
