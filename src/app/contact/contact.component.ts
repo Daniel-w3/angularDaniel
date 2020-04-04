@@ -15,29 +15,45 @@ export class ContactComponent implements OnInit {
   feedbackForm: FormGroup;
   fb: Feedback;
 
-  constructor(private feedBackService: FeedbackService,
-    @Inject('BaseURL') public  BaseURL,
-    private fbformbuilding: FormBuilder) {this.createForm();}
+  constructor(
+    private feedBackService: FeedbackService,
+    @Inject('BaseURL') public BaseURL,
+    private fbformbuilding: FormBuilder
+  ) {
+    this.createForm();
+  }
 
   ngOnInit() {
-    this.feedBackService.getFeedbacks().subscribe(feedbacks => this.feedbacks = feedbacks);
+    this.feedBackService
+      .getFeedbacks()
+      .subscribe(feedbacks => (this.feedbacks = feedbacks));
   }
   createForm() {
     this.feedbackForm = this.fbformbuilding.group({
-    firstname: '',
-    lastname: '',
-    message: ''
+      firstname: '',
+      lastname: '',
+      message: '',
+      date: this.currentDate()
     });
   }
   onSubmitFeedback() {
     this.fb = this.feedbackForm.value;
     console.log(this.fb);
     // this.feedbacks.push(this.fb);
-    this.feedBackService.addFeedbacks(this.fb).subscribe(fb => this.feedbacks.push(this.fb));
+    this.feedBackService
+      .addFeedbacks(this.fb)
+      .subscribe(fb => this.feedbacks.push(this.fb));
     this.feedbackForm.reset({
       firstname: '',
       lastname: '',
-      message: ''
+      message: '',
+      date: this.currentDate()
     });
+  }
+
+  //Get Current Date and Formatted (JS)
+  currentDate() {
+    let d = new Date();
+    return (("00" + d.getDate()).slice(-2)).toString() + " - " + new Date().toString().slice(4,7) + " - " + d.getFullYear().toString();
   }
 }
