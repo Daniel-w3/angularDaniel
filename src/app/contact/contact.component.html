@@ -7,7 +7,8 @@
                     <ul class="list-group list-group-flush" *ngFor="let feedback of feedbacks">
                         <li class="list-group-item"><b>{{feedback.firstname}}</b> <br>
                             {{feedback.lastname}} <br>
-                            <span>-- {{feedback.message}}</span>
+                            <span>-- {{feedback.message}}</span> <br>
+                            {{feedback.date}}
                         </li>
                     </ul>
                 </div>
@@ -32,7 +33,6 @@
                     <label for="lastname" class="col-md-2 col-form-label">Your Last Name</label>
                     <div class="col-md-5">
                         <input type="text" id="lastname" formControlName="lastname" placeholder="Your Last  Name">
-
                     </div>
                 </div>
                 <div class="form-group row">

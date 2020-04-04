@@ -3,4 +3,5 @@ export class Feedback {
     lastname: string;
     message: string;
     id: number;
+    date: string;
   }
