@@ -18,6 +18,8 @@ import { HomeComponent } from './home/home.component';
 import { baseURL } from './shared/baseurl';
 import { ContactComponent } from './contact/contact.component';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +33,9 @@ import { ContactComponent } from './contact/contact.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     DishService,
