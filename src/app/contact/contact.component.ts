@@ -54,6 +54,6 @@ export class ContactComponent implements OnInit {
   //Get Current Date and Formatted (JS)
   currentDate() {
     let d = new Date();
-    return (("00" + d.getDate()).slice(-2)).toString() + " - " + new Date().toString().slice(4,7) + " - " + d.getFullYear().toString();
+    return (("00" + d.getDate()).slice(-2)).toString() + " - " + d.toString().slice(4,7) + " - " + d.getFullYear().toString();
   }
 }
